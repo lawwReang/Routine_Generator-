@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
+
+  --color-bg: #0f1115;
+  --color-sidebar-bg: #161a1f;
+  --color-card-bg: #1c2128;
+  --color-accent: #3b82f6;
+  --color-text-primary: #e2e8f0;
+  --color-text-secondary: #94a3b8;
+  --color-border: #2d333b;
+
+  /* Mapping existing semantic colors to new theme */
+  --color-surface: var(--color-bg);
+  --color-on-surface: var(--color-text-primary);
+  --color-on-secondary-container: var(--color-text-secondary);
+  --color-primary: var(--color-accent);
+  --color-primary-container: var(--color-accent);
+  --color-surface-container-lowest: var(--color-card-bg);
+  --color-surface-container-low: var(--color-bg);
+  --color-surface-container-high: var(--color-card-bg);
+  --color-outline-variant: var(--color-border);
+  --color-secondary-container: var(--color-border);
+}
+
+@layer base {
+  body {
+    @apply font-body bg-bg text-text-primary;
+  }
+  h1, h2, h3, h4 {
+    @apply font-headline;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
